@@ -3,7 +3,7 @@ import importlib
 import pandas as pd
 import sqlite3
 
-class TestAssignmentThree(unittest.TestCase):
+class TestMidterm(unittest.TestCase):
     def test_01(self):
         result_01 = pd.read_sql(asgmt.answer_01, connection)
         self.assertEqual(result_01.shape, (3, 2))
@@ -89,7 +89,7 @@ class TestAssignmentThree(unittest.TestCase):
         
 connection = sqlite3.connect("taiwan_election_2024.db")
 asgmt = importlib.import_module("answers")
-suite = unittest.TestLoader().loadTestsFromTestCase(TestAssignmentThree)
+suite = unittest.TestLoader().loadTestsFromTestCase(TestMidterm)
 runner = unittest.TextTestRunner(verbosity=2)
 test_results = runner.run(suite)
 number_of_failures = len(test_results.failures)
