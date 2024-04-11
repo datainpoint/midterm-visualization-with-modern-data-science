@@ -88,7 +88,7 @@ class TestAssignmentThree(unittest.TestCase):
         self.assertEqual(candidates.size, 2)
         
 connection = sqlite3.connect("taiwan_election_2024.db")
-asgmt = importlib.import_module("suggested_answers")
+asgmt = importlib.import_module("answers")
 suite = unittest.TestLoader().loadTestsFromTestCase(TestAssignmentThree)
 runner = unittest.TextTestRunner(verbosity=2)
 test_results = runner.run(suite)
